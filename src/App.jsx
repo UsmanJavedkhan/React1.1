@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -8,7 +8,9 @@ import { CARD_DATA } from "./data.js";
 import Cards from "./components/ui/card.jsx";
 import { Skills } from "./components/ui/Checkbox.jsx";
 import { Clock } from "./components/ui/clock.jsx";
-
+import { college } from "./data.js";
+import { Collegedata } from "./components/ui/College.jsx";
+import { Unmounted } from "./components/ui/Unmounted.jsx";
 function App() {
   function Logo() {
     return (
@@ -52,7 +54,33 @@ function App() {
 // COLOR CLOCK
 const [color,setcolor] = useState("grey");
  // END
+
+
+
+//  HOOKS
+const [counter,setcounter]= useState(0);
+const [display,setdisplay]= useState(true);
+function handlecounter(){
+  console.log("Handle Counter clicked once",counter);
+}
+
+
+useEffect(()=>{
+handlecounter(); 
+},[]);
+
+// useEffect(()=>{
+
+//   return()=>{
+//     console.log("unmounting phase only ");
+//   };
+
+
+// },[])
+// END HOOKS
+
   return (
+
     <>
       <div>
 
@@ -164,6 +192,30 @@ const [color,setcolor] = useState("grey");
 
       {/* END */}
 
+{/* COLLEGE DATA */}
+<div>
+{
+college.map((col,index) => (
+<Collegedata key={index} college={col}/>
+))}
+</div>
+{/* END */}
+
+
+
+{/* HOOKS */}
+
+<div>
+ <h1>USE EFFECT HOOKS</h1>
+ 
+<button onClick={()=>setcounter(counter+1)}>Hooks{counter}</button>
+
+<button onClick={()=>setdisplay(!display)}>toggle</button>
+</div>
+
+{display ? <Unmounted/> : null}
+
+{/* END HOOKS */}
 
 
 
