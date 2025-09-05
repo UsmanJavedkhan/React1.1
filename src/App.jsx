@@ -9,8 +9,12 @@ import Cards from "./components/ui/card.jsx";
 import { Skills } from "./components/ui/Checkbox.jsx";
 import { Clock } from "./components/ui/clock.jsx";
 import { college } from "./data.js";
+import { USEREF } from "./components/ui/USEREF.jsx";
 import { Collegedata } from "./components/ui/College.jsx";
 import { Unmounted } from "./components/ui/Unmounted.jsx";
+import Dynamicstyling from "./components/ui/Dynamicstyling.jsx";
+import { UncontrolledCom } from "./components/ui/UncontrolledCom.jsx";
+import { USESFORMSTATUS } from "./components/ui/USEFORMSTATUS.jsx";
 function App() {
   function Logo() {
     return (
@@ -217,8 +221,12 @@ college.map((col,index) => (
 
 {/* END HOOKS */}
 
+<Dynamicstyling/>
+<USEREF/>
 
+<UncontrolledCom/>
 
+<USESFORMSTATUS/>
     </>
   );
 }

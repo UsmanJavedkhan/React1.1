@@ -7,7 +7,7 @@ import  { useEffect } from "react";
   }, []);
 
   return (
-    <div className="each_cards">
+    <div style={{margin:"10px",border:"2px solid black",padding:"10px"}}>
       <h3>{title}</h3>
       <p>{content}</p>
     </div>
