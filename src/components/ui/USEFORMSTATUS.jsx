@@ -21,7 +21,7 @@ function Customerformstatus(){
         <input type="text" placeholder="ENTER PASS"/>
         <br />
         <br />
-        <button disabled={pending}>{pending?'submitting':'submit'}</button>
+        <button disabled={pending}>{pending?'submitting...':'submit'}</button>
      </div>  
     )
     

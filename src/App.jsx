@@ -15,6 +15,10 @@ import { Unmounted } from "./components/ui/Unmounted.jsx";
 import Dynamicstyling from "./components/ui/Dynamicstyling.jsx";
 import { UncontrolledCom } from "./components/ui/UncontrolledCom.jsx";
 import { USESFORMSTATUS } from "./components/ui/USEFORMSTATUS.jsx";
+import { USETRANSITIONSTATE } from "./components/ui/USETRANSITIONSTATE.jsx";
+import { USEDERIVED } from "./components/ui/DERVRD STATE.jsx";
+import { Liftingstateup } from "./components/ui/LIFTING STATE UP.jsx";
+import { UpdateObjectinstate } from "./components/ui/UPDATE OBJECT IN STATE.jsx";
 function App() {
   function Logo() {
     return (
@@ -223,10 +227,12 @@ college.map((col,index) => (
 
 <Dynamicstyling/>
 <USEREF/>
-
 <UncontrolledCom/>
-
 <USESFORMSTATUS/>
+<USETRANSITIONSTATE/>
+<USEDERIVED/>
+<Liftingstateup/>
+<UpdateObjectinstate/>
     </>
   );
 }
